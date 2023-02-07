@@ -1,0 +1,46 @@
+body {
+    background: black;
+    margin: 0;
+}
+
+.gameOver {
+    color: white;
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2vw;
+}
+
+.countDown {
+    color: white;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3vw;
+}
+
+.smashHeading {
+    color: white;
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2vw;
+}
