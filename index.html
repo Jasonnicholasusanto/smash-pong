@@ -12,11 +12,74 @@
 
 <body>
     <div style="position: relative; display: inline-block">
-        <div id="gameOver" class="gameOver"></div>
-        <div id="countDown" class="countDown"></div>
-        <h1 id="smash" class="smashHeading">Smash!</h1>
-        <canvas></canvas>
+        <div style="
+            position: absolute;
+            display: flex;
+            width: 100%;
+            top: 50%;
+            align-items: center;">
+            
+            <center id="landing" class="landing">
+
+                <div id="noticeBoard" class="noticeBoard">
+                    <div id="noticeBoardWrapper" class="noticeBoardWrapper">    
+                        <h1>
+                            Welcome to Smash Pong!
+                        </h1>
+                    </div>
+
+                    <p>Smash Pong! A remake of the original Pong video game but with a twist!</p>
+                    <br/>
+                    
+                    <h2>
+                        <u>
+                            Player Controls
+                        </u>
+                    </h2>
+                    
+                    <ul>
+                        <li>Red paddle movements: "w" to move up and "s" to move down.</li>
+                        <br/>
+                        <li>Red paddle smash: "t" to smash the ball.</li>
+                        <br/>
+                        <li>Blue paddle movements: "ArrowUp" to move up and "ArrowDown" to move down.</li>
+                        <br/>
+                        <li>Blue paddle smash: "Enter" to smash the ball.</li>
+                        <br/>
+                    </ul>
+
+                    <h2>
+                        <u>
+                            Objective & Rules
+                        </u>
+                    </h2>
+
+                    <ul>
+                        <li>Score the ball on your opponent's side to win</li>
+                        <br/>
+                        <li>When the ball is heading towards your bat, smash it to return the ball at a higher speed to your opponent's side</li>
+                    </ul>
+                </div>
+
+                <button id="startButton" class="startButton" onClick="startGameBtn()">Start</button>
+            </center>
+
+            <div id="gameOver" class="gameOver"></div>
+            <div id="countDown" class="countDown"></div>
+            <h1 id="smash" class="smashHeading">Smash!</h1>
+
+            <div id="middleLine" class="middleLine"></div>
+        </div>
+
+        <audio id="hit-bat-audio" src="audio/hit-bat.mp3"></audio>
+        <audio id="smash-audio" src="audio/smash-power.wav"></audio>
+
+        <canvas class="canvas"/>
+
     </div>
 
+    <script src="./js/utilities.js"></script>
+    <script src="./js/classes.js"></script>
     <script src="index.js"></script>
+
 </body>
