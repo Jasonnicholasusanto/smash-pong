@@ -9,6 +9,7 @@ let gameOver = false;
 let gameOption = 'easy';
 let smashCaptionStatus = false;
 
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
 const paddle1 = new Paddle({
     position: {
@@ -39,6 +40,14 @@ const ball = new Ball({
 paddle1.draw()
 paddle2.draw()
 
+// function themeMusic() {
+//     themeSong.autoplay = true;
+//     themeSong.loop = true;
+//     themeSong.play();
+//     console.log("music");
+// }
+
+// themeMusic();
 
 function animate() {
 
@@ -48,6 +57,8 @@ function animate() {
 
     paddle1.draw()
     paddle2.draw()
+
+    // themeSong.pause();
 
     if (startGame && !gameOver){
         paddle1.update()
@@ -67,7 +78,6 @@ function animate() {
 }
 
 ball.draw();
-// animate();
 
 const keys = {
     w: {

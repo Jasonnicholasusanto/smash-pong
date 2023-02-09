@@ -114,12 +114,14 @@ class Ball {
         if (this.position.x >= canvas.width) {
             document.querySelector("#gameOver").style.display = "flex"
             document.querySelector("#gameOver").innerHTML = "Red wins"
+            document.querySelector("#point-audio").play();
             gameOver = true;
         } 
 
         if (this.position.x + this.width <= 0) {
             document.querySelector("#gameOver").style.display = "flex"
             document.querySelector("#gameOver").innerHTML = "Blue wins"
+            document.querySelector("#point-audio").play();
             gameOver = true;
         }
 

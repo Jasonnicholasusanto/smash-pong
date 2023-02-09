@@ -50,6 +50,7 @@ body {
     background-color: white;
     padding: 15px;
     border-radius: 4px;
+    margin: 10px;
     /* position: relative; */
     align-items: center;
     justify-content: center;
@@ -62,6 +63,27 @@ body {
 }
 
 .startButton:hover {
+    background-color: rgb(196, 196, 196);
+    color: black;
+}
+
+.musicButton {
+    display: inline-flex;
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+    /* position: absolute; */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    font-family: 'Press Start 2P', cursive;
+    transition-duration: 0.4s;
+    z-index: 1;
+}
+
+.musicButton:hover {
     background-color: rgb(196, 196, 196);
     color: black;
 }

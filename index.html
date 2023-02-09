@@ -11,7 +11,18 @@
 </head>
 
 <body>
+
+    <iframe src="audio/menu-theme.mp3" allow="autoplay" style="display:none" id="menu-theme-iframe">
+    </iframe> 
+
+    <!-- <audio autoplay loop id="menu-theme-audio">
+        <source src="audio/menu-theme.mp3">
+    </audio> -->
+
+    <audio id="menu-theme-audio" src="audio/menu-theme.mp3"></audio>
+
     <div style="position: relative; display: inline-block">
+
         <div style="
             position: absolute;
             display: flex;
@@ -65,6 +76,10 @@
                 </div>
 
                 <button id="startButton" class="startButton" onClick="startGameBtn()">Start</button>
+
+                <button id="unmuteMusic" class="musicButton" onClick="playThemeSong()">Unmute</button>
+                <button id="muteMusic" class="musicButton" onClick="pauseThemeSong()" style="display: none;">Mute</button>
+
             </center>
 
             <div id="gameOver" class="gameOver"></div>
@@ -76,6 +91,9 @@
 
         <audio id="hit-bat-audio" src="audio/hit-bat.mp3"></audio>
         <audio id="smash-audio" src="audio/smash-power.wav"></audio>
+        
+        <audio id="point-audio" src="audio/score-point.wav"></audio> 
+        <!-- Link: https://freesound.org/s/609335/ -->
 
         <canvas class="canvas"/>
 

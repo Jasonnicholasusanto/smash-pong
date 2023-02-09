@@ -23,7 +23,18 @@ function decreaseTimer() {
 
 }
 
-// decreaseTimer();
+function playThemeSong() {
+    document.querySelector("#menu-theme-audio").play();
+    document.querySelector("#muteMusic").style.display = "flex";
+    document.querySelector("#unmuteMusic").style.display = "none";
+}
+
+function pauseThemeSong() {
+    document.querySelector("#menu-theme-audio").pause();
+    document.querySelector("#unmuteMusic").style.display = "flex";
+    document.querySelector("#muteMusic").style.display = "none";
+}
+
 
 
 let timer2 = 2;
