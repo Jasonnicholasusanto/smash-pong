@@ -11,8 +11,13 @@ function decreaseTimer() {
         // This line of code changes the value/items in the HTML div into the provided value.
         document.querySelector('#countDown').innerHTML = timer - 1
 
+        if(timer-2 >= 0){
+            document.querySelector("#countdown-audio").play();
+        }
+
         if (timer == 1) {
             document.querySelector("#countDown").innerHTML = "LET'S PONG!"
+            document.querySelector("#countdown-start-audio").play();
         }
     }
 
@@ -24,12 +29,14 @@ function decreaseTimer() {
 }
 
 function playThemeSong() {
+    document.querySelector("#click-audio").play();
     document.querySelector("#menu-theme-audio").play();
     document.querySelector("#muteMusic").style.display = "flex";
     document.querySelector("#unmuteMusic").style.display = "none";
 }
 
 function pauseThemeSong() {
+    document.querySelector("#click-audio").play();
     document.querySelector("#menu-theme-audio").pause();
     document.querySelector("#unmuteMusic").style.display = "flex";
     document.querySelector("#muteMusic").style.display = "none";
@@ -71,9 +78,17 @@ function movement() {
 
 function startGameBtn() {
 
+    buttonClicked();
+
     document.querySelector("#startButton").style.display = "none";
     document.querySelector("#landing").style.display = "none";
 
+    document.querySelector("#menu-theme-audio").pause();
+
     decreaseTimer();
     animate();
+}
+
+function buttonClicked() {
+    document.querySelector("#click-audio").play();
 }

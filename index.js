@@ -58,9 +58,9 @@ function animate() {
     paddle1.draw()
     paddle2.draw()
 
-    // themeSong.pause();
 
     if (startGame && !gameOver){
+        document.querySelector("#game-theme-audio").play();
         paddle1.update()
         paddle2.update()
         ball.update()

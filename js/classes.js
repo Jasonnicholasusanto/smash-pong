@@ -109,6 +109,7 @@ class Ball {
         if (this.position.y + this.height + this.velocity.y >= canvas.height
             || this.position.y + this.velocity.y <= 0){
             this.velocity.y = -this.velocity.y;
+            document.querySelector("#wall-audio").play();
         }
 
         if (this.position.x >= canvas.width) {
