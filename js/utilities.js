@@ -92,7 +92,31 @@ function startGameBtn() {
     game();
 }
 
+function finishGameBtn() {
+
+    buttonClicked();
+
+    document.querySelector("#gameOver").style.display = "none";
+    document.querySelector("#finishGameBtn").style.display = "none";
+    
+    endGame();
+}
+
+function endGame() {
+    
+    if(redPoints > bluePoints) {
+        document.querySelector("#endGame").innerHTML = "RED WINS: " + redPoints + " to " + bluePoints;
+    } else {
+        document.querySelector("#endGame").innerHTML = "BLUE WINS: " + bluePoints + " to " + redPoints;
+    }
+
+    document.querySelector("#endGame").style.display = "flex";
+}
+
 function nextRound() {
+
+    buttonClicked();
+    
     document.querySelector("#gameOver").style.display = "none";
     document.querySelector("#next-round-btn").style.display = "none";
 

@@ -95,21 +95,13 @@
                 <button id="muteMusic" class="musicButton" onClick="pauseThemeSong()" style="display: none;">Mute</button>
 
             </center>
-
-            <!-- <center id="scoreBoard" class="scoreBoard">
-                <h1 id="redScore" class="redScore">
-                    0
-                </h1>
-
-                <h1 id="blueScore" class="blueScore">
-                    0
-                </h1>
-            </center> -->
             
 
             <div id="gameOver" class="gameOver"></div>
             <div id="countDown" class="countDown"></div>
             <h1 id="smash" class="smashHeading">Smash!</h1>
+
+            <div id="endGame" class="endGame"></div>
 
             <div id="middleLine" class="middleLine"></div>
         </div>
@@ -133,6 +125,8 @@
         <!-- https://freesound.org/s/418556/ -->
 
         <button id="next-round-btn" class="nextRoundBtn" onclick="nextRound()">Next Round</button>
+
+        <button id="finishGameBtn" class="nextRoundBtn" onclick="finishGameBtn()">Finish</button>
 
         <canvas id="canvas" class="canvas"/>
 

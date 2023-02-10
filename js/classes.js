@@ -43,6 +43,7 @@ class Ball {
         x: Math.random() - 0.5 >= 0 ? -speed : speed,
         y: Math.random() - 0.5 >= 0 ? -speed : speed,
        }
+
        this.velocity = {
         x: direction.x,
         y: direction.y,
@@ -116,8 +117,8 @@ class Ball {
         if (this.position.x >= canvas.width) {
             redPoints += 1;
             document.querySelector("#redScore").innerHTML = redPoints;
-            document.querySelector("#gameOver").style.display = "flex"
-            document.querySelector("#gameOver").innerHTML = "Red wins"
+            document.querySelector("#gameOver").style.display = "flex";
+            document.querySelector("#gameOver").innerHTML = "Red Point!";
             document.querySelector("#point-audio").play();
             gameOver = true;
         } 
@@ -125,8 +126,8 @@ class Ball {
         if (this.position.x + this.width <= 0) {
             bluePoints += 1;
             document.querySelector("#blueScore").innerHTML = bluePoints;
-            document.querySelector("#gameOver").style.display = "flex"
-            document.querySelector("#gameOver").innerHTML = "Blue wins"
+            document.querySelector("#gameOver").style.display = "flex";
+            document.querySelector("#gameOver").innerHTML = "Blue Point!";
             document.querySelector("#point-audio").play();
             gameOver = true;
         }

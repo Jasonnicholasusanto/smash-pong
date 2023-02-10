@@ -8,7 +8,8 @@ let startGame = false;
 let gameOver = false;
 let gameOption = 'easy';
 let smashCaptionStatus = false;
-let gameRounds = 5;
+let ballInitialSpeed = 3;
+let winRound = 3;
 let gameCount = 0;
 let redPoints = 0;
 let bluePoints = 0;
@@ -37,7 +38,7 @@ const ball = new Ball({
         x: canvas.width / 2 - 5,
         y: canvas.height / 2 - 5,
     },
-    speed: 3
+    speed: ballInitialSpeed
 })
 
 paddle1.draw()
@@ -45,7 +46,7 @@ paddle2.draw()
 
 function game() {
 
-    if(gameCount < gameRounds) {
+    if(bluePoints != winRound && redPoints != winRound) {
         gameCount += 1;
         gameOver = false;
 
@@ -62,10 +63,15 @@ function game() {
             y: canvas.height / 2 - 5,
         }
 
-        ball.speed = 3;
+        ball.velocity = {
+            x: Math.random() - 0.5 >= 0 ? -ballInitialSpeed : ballInitialSpeed,
+            y: Math.random() - 0.5 >= 0 ? -ballInitialSpeed : ballInitialSpeed,
+        } 
 
         animate();
-        console.log("Back to game()");
+        console.log("Game: " + gameCount);
+    } else {
+        endGame();
     }
 }
 
@@ -102,8 +108,27 @@ function animate() {
             document.querySelector("#smash").style.display = "none";
         }
     } else {
-        document.querySelector("#next-round-btn").style.display = "block";
-        startGame = false;
+
+        if (bluePoints != winRound && redPoints != winRound) {
+
+
+            if ((bluePoints == winRound - 1 || redPoints == winRound - 1) && 
+                !(bluePoints == winRound - 1 && redPoints == winRound - 1)) {
+                if (redPoints == winRound - 1) {
+                    document.querySelector("#gameOver").innerHTML = "Game point for Red!";
+                } else {
+                    document.querySelector("#gameOver").innerHTML = "Game point for Blue!";
+                }
+            } else if (bluePoints == winRound - 1 && redPoints == winRound - 1) {
+                document.querySelector("#next-round-btn").innerHTML = "Winning Round!";
+            }
+
+            document.querySelector("#next-round-btn").style.display = "block";
+            startGame = false;
+        } else {
+            document.querySelector("#finishGameBtn").style.display = "block";
+        }
+
     }
 
 

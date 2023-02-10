@@ -100,7 +100,7 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    width: 150px;
+    width: 200px;
     height: 50px;
     font-family: 'Press Start 2P', cursive;
     transition-duration: 0.4s;
@@ -199,4 +199,18 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 50px;
     padding-left: 50px;
+}
+
+.endGame {
+    color: white;
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3vw;
 }
