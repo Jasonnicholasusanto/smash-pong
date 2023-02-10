@@ -214,3 +214,16 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 3vw;
 }
+
+.version {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 95%;
+    z-index: 1;
+    /* display: inline-block; */
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    padding-right: 50px;
+}
