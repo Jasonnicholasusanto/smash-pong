@@ -112,7 +112,10 @@ class Ball {
             document.querySelector("#wall-audio").play();
         }
 
+        // Check collisions with the left and right margins of screen
         if (this.position.x >= canvas.width) {
+            redPoints += 1;
+            document.querySelector("#redScore").innerHTML = redPoints;
             document.querySelector("#gameOver").style.display = "flex"
             document.querySelector("#gameOver").innerHTML = "Red wins"
             document.querySelector("#point-audio").play();
@@ -120,6 +123,8 @@ class Ball {
         } 
 
         if (this.position.x + this.width <= 0) {
+            bluePoints += 1;
+            document.querySelector("#blueScore").innerHTML = bluePoints;
             document.querySelector("#gameOver").style.display = "flex"
             document.querySelector("#gameOver").innerHTML = "Blue wins"
             document.querySelector("#point-audio").play();

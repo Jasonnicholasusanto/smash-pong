@@ -3,6 +3,8 @@ let timerId
 
 function decreaseTimer() {
 
+    document.querySelector('#countDown').style.display = "flex"
+
     if(timer>0){
         // This line creates the loop
         timerId = setTimeout(decreaseTimer, 1000)
@@ -34,6 +36,7 @@ function playThemeSong() {
     document.querySelector("#muteMusic").style.display = "flex";
     document.querySelector("#unmuteMusic").style.display = "none";
 }
+
 
 function pauseThemeSong() {
     document.querySelector("#click-audio").play();
@@ -86,7 +89,16 @@ function startGameBtn() {
     document.querySelector("#menu-theme-audio").pause();
 
     decreaseTimer();
-    animate();
+    game();
+}
+
+function nextRound() {
+    document.querySelector("#gameOver").style.display = "none";
+    document.querySelector("#next-round-btn").style.display = "none";
+
+    timer = 5;
+    decreaseTimer();
+    game();
 }
 
 function buttonClicked() {

@@ -8,8 +8,11 @@ let startGame = false;
 let gameOver = false;
 let gameOption = 'easy';
 let smashCaptionStatus = false;
+let gameRounds = 5;
+let gameCount = 0;
+let redPoints = 0;
+let bluePoints = 0;
 
-var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
 const paddle1 = new Paddle({
     position: {
@@ -40,45 +43,76 @@ const ball = new Ball({
 paddle1.draw()
 paddle2.draw()
 
-// function themeMusic() {
-//     themeSong.autoplay = true;
-//     themeSong.loop = true;
-//     themeSong.play();
-//     console.log("music");
-// }
+function game() {
 
-// themeMusic();
+    if(gameCount < gameRounds) {
+        gameCount += 1;
+        gameOver = false;
+
+        paddle1.position = {
+            x: 10, 
+            y: canvas.height / 2 - 50};
+
+        paddle2.position = {
+            x: canvas.width - 10 * 2, 
+            y: canvas.height / 2 - 50};
+
+        ball.position = {
+            x: canvas.width / 2 - 5,
+            y: canvas.height / 2 - 5,
+        }
+
+        ball.speed = 3;
+
+        animate();
+        console.log("Back to game()");
+    }
+}
+
 
 function animate() {
 
-    requestAnimationFrame(animate)
-    c.fillStyle = 'black'
-    c.fillRect(0, 0, canvas.width, canvas.height)
+    if (!gameOver) {
+        requestAnimationFrame(animate)
+        c.fillStyle = 'black'
+        c.fillRect(0, 0, canvas.width, canvas.height)
 
-    paddle1.draw()
-    paddle2.draw()
+        paddle1.draw()
+        paddle2.draw()
+
+        document.getElementById("menu-theme-audio").loop = true;
+        document.getElementById("game-theme-audio").loop = true;
+
+        console.log("Still in animate()");
 
 
-    if (startGame && !gameOver){
-        document.querySelector("#game-theme-audio").play();
-        paddle1.update()
-        paddle2.update()
-        ball.update()
-    } else if (startGame) {
-        paddle1.update()
-        paddle2.update()
-    }
+        if (startGame && !gameOver){
+            document.querySelector("#game-theme-audio").play();
+            paddle1.update()
+            paddle2.update()
+            ball.update()
+        } else if (startGame) {
+            paddle1.update()
+            paddle2.update()
+        } 
 
-    if (smashCaptionStatus) {
-        document.querySelector("#smash").style.display = "flex";
+        if (smashCaptionStatus) {
+            document.querySelector("#smash").style.display = "flex";
+        } else {
+            document.querySelector("#smash").style.display = "none";
+        }
     } else {
-        document.querySelector("#smash").style.display = "none";
+        document.querySelector("#next-round-btn").style.display = "block";
+        startGame = false;
     }
+
 
 }
 
 ball.draw();
 
+
+/* Player controls */
 const keys = {
     w: {
         pressed: false

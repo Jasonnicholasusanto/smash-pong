@@ -12,15 +12,28 @@
 
 <body>
 
-    <iframe src="audio/menu-theme-2.mp3" allow="autoplay" style="display:none" id="menu-theme-iframe">
-    </iframe> 
+    <!-- <iframe src="audio/menu-theme-2.mp3" allow="autoplay" style="display:none" id="menu-theme-iframe">
+    </iframe>  -->
 
     <!-- <audio autoplay loop id="menu-theme-audio">
         <source src="audio/menu-theme.mp3">
     </audio> -->
 
-    <audio id="menu-theme-audio" src="audio/menu-theme-final.wav"></audio>
-    <audio id="game-theme-audio" src="audio/game-theme.wav"></audio>
+
+    <audio id="menu-theme-audio" src="audio/menu-theme-final.wav" loop="true" autoplay></audio>
+    <audio id="game-theme-audio" src="audio/game-theme.wav" loop="true"></audio>
+
+    <div id="scoreBoard" class="scoreBoard">
+
+        <div id="redScore" class="redScore">
+            0
+        </div>
+
+        <div id="blueScore" class="blueScore">
+            0
+        </div>
+    </div>
+
 
     <div style="position: relative; display: inline-block">
 
@@ -83,6 +96,17 @@
 
             </center>
 
+            <!-- <center id="scoreBoard" class="scoreBoard">
+                <h1 id="redScore" class="redScore">
+                    0
+                </h1>
+
+                <h1 id="blueScore" class="blueScore">
+                    0
+                </h1>
+            </center> -->
+            
+
             <div id="gameOver" class="gameOver"></div>
             <div id="countDown" class="countDown"></div>
             <h1 id="smash" class="smashHeading">Smash!</h1>
@@ -108,7 +132,9 @@
 
         <!-- https://freesound.org/s/418556/ -->
 
-        <canvas class="canvas"/>
+        <button id="next-round-btn" class="nextRoundBtn" onclick="nextRound()">Next Round</button>
+
+        <canvas id="canvas" class="canvas"/>
 
     </div>
 

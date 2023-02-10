@@ -29,6 +29,7 @@ body {
     left: 0;
     font-family: 'Press Start 2P', cursive;
     font-size: 3vw;
+    z-index: 1;
 }
 
 .smashHeading {
@@ -88,6 +89,29 @@ body {
     color: black;
 }
 
+.nextRoundBtn {
+    display: none;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    font-family: 'Press Start 2P', cursive;
+    transition-duration: 0.4s;
+    z-index: 1;
+}
+
+.nextRoundBtn:hover {
+    background-color: rgb(196, 196, 196);
+    color: black;
+}
+
 .middleLine {
     position: absolute;
     border-style: dashed;
@@ -95,6 +119,7 @@ body {
     border-right: 10px 2px;
     height: 99vh;
     left: 50%;
+    transform: translate(-50%, 0);
 } 
 
 .canvas {
@@ -150,4 +175,28 @@ body {
 .noticeBoard ul {
     display: block;
     text-align: left;
+}
+
+.scoreBoard {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 5%;
+    z-index: 1;
+}
+
+.redScore {
+    display: inline-block;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    padding-right: 50px;
+}
+
+.blueScore {
+    display: inline-block;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    padding-left: 50px;
 }
