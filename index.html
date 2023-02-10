@@ -10,15 +10,8 @@
     <link rel="stylesheet" href="index.css"/>
 </head>
 
+
 <body>
-
-    <!-- <iframe src="audio/menu-theme-2.mp3" allow="autoplay" style="display:none" id="menu-theme-iframe">
-    </iframe>  -->
-
-    <!-- <audio autoplay loop id="menu-theme-audio">
-        <source src="audio/menu-theme.mp3">
-    </audio> -->
-
 
     <audio id="menu-theme-audio" src="audio/menu-theme-final.wav" loop="true" autoplay></audio>
     <audio id="game-theme-audio" src="audio/game-theme.wav" loop="true"></audio>
@@ -33,6 +26,41 @@
             0
         </div>
     </div>
+    
+
+    <center id="landing" class="landing">
+                    
+        <div id="welcomeBoard" class="welcomeBoard">
+            <span class="gameName">
+                Smash Pong!
+            </span>
+
+            <h3>
+                - Version 1.1 -
+            </h3>
+
+
+            <div id="startButton" class="play-btn" onclick="startGameBtn()">
+                <div class="play-in_btn">Play</div>
+            </div>
+
+            <div id="unmuteMusic" class="music-btn" onclick="playThemeSong()">
+                <div class="music-in_btn">Unmute</div>
+            </div>
+
+            <div id="muteMusic" style="display: none" class="music-btn" onclick="pauseThemeSong()">
+                <div class="music-in_btn">Mute</div>
+            </div>
+
+            <p>
+                Made by Jason Nicholas Susanto
+            </p>
+
+        </div>
+
+    </center>
+
+    <!-- <div id="blurCover" class="blurCover"/> -->
 
 
     <div style="position: relative; display: inline-block">
@@ -43,8 +71,36 @@
             width: 100%;
             top: 50%;
             align-items: center;">
+
+            <!-- <center id="landing" class="landing">
+                    
+                <div id="welcomeBoard" class="welcomeBoard">
+                    <span class="gameName">
+                        Smash Pong!
+                    </span>
+
+                    <h3>
+                        Version 1.1
+                    </h3>
+                </div>
+
+                <button id="startButton" class="startButton" onClick="startGameBtn()">Play</button>
+
+            </center> -->
+
+            <!-- <center id="landing" class="landing">
+
+                <div id="noticeBoard" class="noticeBoard">
+                    <div id="noticeBoardWrapper" class="noticeBoardWrapper">    
+                        <h1>
+                            Welcome to Smash Pong!
+                        </h1>
+                    </div>
+                </div>
+
+            </center> -->
             
-            <center id="landing" class="landing">
+            <!-- <center id="landing" class="landing">
 
                 <div id="noticeBoard" class="noticeBoard">
                     <div id="noticeBoardWrapper" class="noticeBoardWrapper">    
@@ -89,14 +145,14 @@
                     <p>Made by Jason Nicholas Susanto</p>
 
                     <p>- Version 1.0</p>
-                </div>
+                </div> 
 
                 <button id="startButton" class="startButton" onClick="startGameBtn()">Start</button>
 
                 <button id="unmuteMusic" class="musicButton" onClick="playThemeSong()">Unmute</button>
                 <button id="muteMusic" class="musicButton" onClick="pauseThemeSong()" style="display: none;">Mute</button>
 
-            </center>
+            </center> -->
             
 
             <div id="gameOver" class="gameOver"></div>

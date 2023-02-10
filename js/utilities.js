@@ -33,7 +33,7 @@ function decreaseTimer() {
 function playThemeSong() {
     document.querySelector("#click-audio").play();
     document.querySelector("#menu-theme-audio").play();
-    document.querySelector("#muteMusic").style.display = "flex";
+    document.querySelector("#muteMusic").style.display = "inline-block";
     document.querySelector("#unmuteMusic").style.display = "none";
 }
 
@@ -41,7 +41,7 @@ function playThemeSong() {
 function pauseThemeSong() {
     document.querySelector("#click-audio").play();
     document.querySelector("#menu-theme-audio").pause();
-    document.querySelector("#unmuteMusic").style.display = "flex";
+    document.querySelector("#unmuteMusic").style.display = "inline-block";
     document.querySelector("#muteMusic").style.display = "none";
 }
 
@@ -116,7 +116,7 @@ function endGame() {
 function nextRound() {
 
     buttonClicked();
-    
+
     document.querySelector("#gameOver").style.display = "none";
     document.querySelector("#next-round-btn").style.display = "none";
 
