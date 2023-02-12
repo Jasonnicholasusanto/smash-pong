@@ -137,7 +137,7 @@ class Ball {
     }
 }
 
-class BeginnerAI extends Paddle {
+class Robot extends Paddle {
     constructor(params) {
         
     }
