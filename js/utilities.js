@@ -183,6 +183,20 @@ function rematch() {
     game();
 }
 
+function gameLevelEasyOption() {
+    document.querySelector("#hardButton").style.display = "none";
+    document.querySelector("#easyButton").style.display = "inline-block";
+
+    gameOption = "hard";
+}
+
+function gameLevelHardOption() {
+    document.querySelector("#easyButton").style.display = "none";
+    document.querySelector("#hardButton").style.display = "inline-block";
+
+    gameOption = "easy";
+}
+
 function buttonClicked() {
     document.querySelector("#click-audio").play();
 }
