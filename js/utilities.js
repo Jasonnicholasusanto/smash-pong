@@ -93,6 +93,7 @@ function pvpOption() {
 
     buttonClicked();
 
+    document.querySelector("#scoreBoard").style.display = "block";
     document.querySelector("#landing-2").style.display = "none";
     document.querySelector("#menu-theme-audio").pause();
 
@@ -155,6 +156,7 @@ function nextRound() {
 function backToMain() {
     buttonClicked(); 
 
+    document.querySelector("#scoreBoard").style.display = "none";
     document.querySelector("#endGame").style.display = "none";
     document.querySelector("#ending-page").style.display = "none";
 
@@ -172,7 +174,7 @@ function rematch() {
 
     redPoints = 0;
     document.querySelector("#redScore").innerHTML = redPoints;
-    
+
     bluePoints = 0;
     document.querySelector("#blueScore").innerHTML = bluePoints;
 

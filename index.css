@@ -581,7 +581,7 @@ body {
     z-index: 1;
     width: 100%;
     top: 50%;
-    transform: translate(0, -15%);
+    transform: translate(0, -18%);
     align-items: center;
 }
 
@@ -591,7 +591,7 @@ body {
     width: 100%;
     z-index: 1;
     width: 100%;
-    top: 15%;
+    top: 10%;
     /* text-align: center; */
     /* transform: translate(0, -15%); */
     align-items: center;
@@ -657,7 +657,7 @@ body {
 }
 
 .welcomeBoard p {
-    padding-top: 190px;
+    padding-top: 220px;
     font-size: 7px;
     /* padding-bottom: 20px; */
 }
@@ -723,6 +723,7 @@ body {
 }
 
 .scoreBoard {
+    display: none;
     position: absolute;
     width: 100%;
     text-align: center;
