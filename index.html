@@ -32,15 +32,17 @@
                     
         <div id="welcomeBoard" class="welcomeBoard">
             <span class="gameName">
-                Smash Pong!
+               Smash Pong!
             </span>
 
+            <!-- <div class="name-container">Smash Pong!</div> -->
+
             <h3>
-                - Version 1.1 -
+                - Version 1.2 -
             </h3>
 
 
-            <div id="startButton" class="play-btn" onclick="startGameBtn()">
+            <div id="startButton" class="play-btn" onclick="gameplayOption()">
                 <div class="play-in_btn">Play</div>
             </div>
 
@@ -60,7 +62,98 @@
 
     </center>
 
-    <!-- <div id="blurCover" class="blurCover"/> -->
+    <center id="landing-2" class="landing-2">
+                    
+        <div id="noticeBoard" class="noticeBoard">
+            <div id="noticeBoardWrapper" class="noticeBoardWrapper">    
+                <h1>
+                    Welcome to Smash Pong!
+                </h1>
+            </div>
+
+            <p>Smash Pong! A remake of the original Pong video game but with a twist!</p>
+            <br/>
+            <h2>
+                <u>
+                    Game Options
+                </u>
+            </h2>
+
+            <ul>
+                <li>1 v 1: Player versus Player</li>
+                <br/>
+                <li>1 v PC: Player versus Computer</li>
+                <br/>
+                <li>PC v PC: Computer versus Computer</li>
+                <br/>
+            </ul>
+            
+            <h2>
+                <u>
+                    Player Controls
+                </u>
+            </h2>
+            
+            <ul>
+                <li>Red paddle movements: "w" to move up and "s" to move down.</li>
+                <br/>
+                <li>Red paddle smash: "t" to smash the ball.</li>
+                <br/>
+                <li>Blue paddle movements: "ArrowUp" to move up and "ArrowDown" to move down.</li>
+                <br/>
+                <li>Blue paddle smash: "Enter" to smash the ball.</li>
+                <br/>
+            </ul>
+
+            <h2>
+                <u>
+                    Objective & Rules
+                </u>
+            </h2>
+
+            <ul>
+                <li>Score the ball on your opponent's side to win</li>
+                <br/>
+                <li>When the ball is heading towards your bat, smash it to return the ball at a higher speed to your opponent's side</li>
+                <br/>
+                <li>A duel is played at a best-of-five format and a maximum round of 5 games.</li>
+                <br/>
+                <li>Have fun!</li>
+            </ul>
+            <br/> 
+        </div>
+
+        <div id="pvp-btn" class="pvp-btn" onclick="pvpOption()">
+            <div class="pvp-in_btn">1 v 1</div>
+        </div>
+
+        <div id="pvr-btn" class="pvr-btn" onclick="pvrOption()">
+            <div class="pvr-in_btn">1 v PC</div>
+        </div>
+
+        <div id="rvr-btn" class="rvr-btn" onclick="rvrOption()">
+            <div class="rvr-in_btn">PC v PC</div>
+        </div>
+
+        <div id="back-btn" class="back-btn" onclick="backBtn()">
+            <div class="back-in_btn">Back</div>
+        </div>
+
+    </center>
+
+    <center id="ending-page" class="ending-page">
+
+        <div id="restart-game" class="restart-game-btn" onclick="rematch()">
+            <div class="restart-game-in_btn">Rematch!</div>
+        </div>
+
+
+        <div id="main-menu" class="main-menu-btn" onclick="backToMain()">
+            <div class="main-menu-in_btn">Main Menu</div>
+        </div>
+
+    </center>
+
 
 
     <div style="position: relative; display: inline-block">
@@ -72,90 +165,8 @@
             top: 50%;
             align-items: center;">
 
-            <!-- <center id="landing" class="landing">
-                    
-                <div id="welcomeBoard" class="welcomeBoard">
-                    <span class="gameName">
-                        Smash Pong!
-                    </span>
 
-                    <h3>
-                        Version 1.1
-                    </h3>
-                </div>
-
-                <button id="startButton" class="startButton" onClick="startGameBtn()">Play</button>
-
-            </center> -->
-
-            <!-- <center id="landing" class="landing">
-
-                <div id="noticeBoard" class="noticeBoard">
-                    <div id="noticeBoardWrapper" class="noticeBoardWrapper">    
-                        <h1>
-                            Welcome to Smash Pong!
-                        </h1>
-                    </div>
-                </div>
-
-            </center> -->
-            
-            <!-- <center id="landing" class="landing">
-
-                <div id="noticeBoard" class="noticeBoard">
-                    <div id="noticeBoardWrapper" class="noticeBoardWrapper">    
-                        <h1>
-                            Welcome to Smash Pong!
-                        </h1>
-                    </div>
-
-                    <p>Smash Pong! A remake of the original Pong video game but with a twist!</p>
-                    <br/>
-                    
-                    <h2>
-                        <u>
-                            Player Controls
-                        </u>
-                    </h2>
-                    
-                    <ul>
-                        <li>Red paddle movements: "w" to move up and "s" to move down.</li>
-                        <br/>
-                        <li>Red paddle smash: "t" to smash the ball.</li>
-                        <br/>
-                        <li>Blue paddle movements: "ArrowUp" to move up and "ArrowDown" to move down.</li>
-                        <br/>
-                        <li>Blue paddle smash: "Enter" to smash the ball.</li>
-                        <br/>
-                    </ul>
-
-                    <h2>
-                        <u>
-                            Objective & Rules
-                        </u>
-                    </h2>
-
-                    <ul>
-                        <li>Score the ball on your opponent's side to win</li>
-                        <br/>
-                        <li>When the ball is heading towards your bat, smash it to return the ball at a higher speed to your opponent's side</li>
-                    </ul>
-
-                    <br/>
-                    <p>Made by Jason Nicholas Susanto</p>
-
-                    <p>- Version 1.0</p>
-                </div> 
-
-                <button id="startButton" class="startButton" onClick="startGameBtn()">Start</button>
-
-                <button id="unmuteMusic" class="musicButton" onClick="playThemeSong()">Unmute</button>
-                <button id="muteMusic" class="musicButton" onClick="pauseThemeSong()" style="display: none;">Mute</button>
-
-            </center> -->
-            
-
-            <div id="gameOver" class="gameOver"></div>
+            <div id="gameOver" class="gameOver">Red Point!</div>
             <div id="countDown" class="countDown"></div>
             <h1 id="smash" class="smashHeading">Smash!</h1>
 
@@ -182,13 +193,19 @@
 
         <!-- https://freesound.org/s/418556/ -->
 
-        <button id="next-round-btn" class="nextRoundBtn" onclick="nextRound()">Next Round</button>
 
-        <button id="finishGameBtn" class="nextRoundBtn" onclick="finishGameBtn()">Finish</button>
+        <div id="next-round-btn" class="next-round-btn" onclick="nextRound()">
+            <div class="next-round-in_btn">Next Round</div>
+        </div>
+
+        <div id="finishGameBtn" class="finish-game-btn" onclick="finishGameBtn()">
+            <div class="finish-game-in_btn">Finish</div>
+        </div>
 
         <canvas id="canvas" class="canvas"/>
 
     </div>
+
 
     <script src="./js/utilities.js"></script>
     <script src="./js/classes.js"></script>

@@ -79,17 +79,43 @@ function movement() {
 }
 
 
-function startGameBtn() {
+function gameplayOption() {
 
     buttonClicked();
 
-    document.querySelector("#startButton").style.display = "none";
     document.querySelector("#landing").style.display = "none";
 
+    document.querySelector("#landing-2").style.display = "block";
+
+}
+
+function pvpOption() {
+
+    buttonClicked();
+
+    document.querySelector("#landing-2").style.display = "none";
     document.querySelector("#menu-theme-audio").pause();
 
     decreaseTimer();
     game();
+
+}
+
+function pvrOption() {
+    buttonClicked();
+
+}
+
+function rvrOption() {
+    buttonClicked();
+    
+}
+
+function backBtn() {
+    buttonClicked();
+
+    document.querySelector("#landing-2").style.display = "none";
+    document.querySelector("#landing").style.display = "block";
 }
 
 function finishGameBtn() {
@@ -111,6 +137,7 @@ function endGame() {
     }
 
     document.querySelector("#endGame").style.display = "flex";
+    document.querySelector("#ending-page").style.display = "block";
 }
 
 function nextRound() {
@@ -125,6 +152,36 @@ function nextRound() {
     game();
 }
 
+function backToMain() {
+    buttonClicked(); 
+
+    document.querySelector("#endGame").style.display = "none";
+    document.querySelector("#ending-page").style.display = "none";
+
+    window.location.reload();
+}
+
+function rematch() {
+    buttonClicked();
+
+    gameOver = false;
+    startGame = false;
+
+    document.querySelector("#endGame").style.display = "none";
+    document.querySelector("#ending-page").style.display = "none";
+
+    redPoints = 0;
+    document.querySelector("#redScore").innerHTML = redPoints;
+    
+    bluePoints = 0;
+    document.querySelector("#blueScore").innerHTML = bluePoints;
+
+    timer = 5;
+    decreaseTimer();
+    game();
+}
+
 function buttonClicked() {
     document.querySelector("#click-audio").play();
 }
+

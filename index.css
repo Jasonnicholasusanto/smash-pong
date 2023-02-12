@@ -9,10 +9,9 @@ body {
     position: absolute;
     align-items: center;
     justify-content: center;
-    top: 0; 
-    right: 0; 
-    bottom: 0; 
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Press Start 2P', cursive;
     font-size: 2vw;
 }
@@ -110,6 +109,310 @@ body {
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
 }
 
+.pvp-btn{
+    display: inline-block;
+    background-color: darkgrey;
+    height: 35px;
+    width: 180px;
+    border-style: solid;
+    border-width: 4px;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-color: dimgrey;
+    border-right-color: dimgrey;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+}
+.pvp-in_btn{
+    padding: 8px;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    color: white;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.pvp-btn:hover{
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+.pvp-btn:active{
+    background-color: darkgrey;
+    color: black;
+    border-left-color: dimgrey;
+    border-top-color: dimgrey;
+    border-bottom-color: white;
+    border-right-color: white;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
+
+.pvr-btn{
+    display: inline-block;
+    margin-left: 20px;
+    background-color: darkgrey;
+    height: 35px;
+    width: 180px;
+    border-style: solid;
+    border-width: 4px;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-color: dimgrey;
+    border-right-color: dimgrey;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+}
+.pvr-in_btn{
+    padding: 8px;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    color: white;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.pvr-btn:hover{
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+.pvr-btn:active{
+    background-color: darkgrey;
+    color: black;
+    border-left-color: dimgrey;
+    border-top-color: dimgrey;
+    border-bottom-color: white;
+    border-right-color: white;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
+.rvr-btn{
+    display: inline-block;
+    margin-left: 20px;
+    background-color: darkgrey;
+    height: 35px;
+    width: 180px;
+    border-style: solid;
+    border-width: 4px;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-color: dimgrey;
+    border-right-color: dimgrey;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+}
+.rvr-in_btn{
+    padding: 8px;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    color: white;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.rvr-btn:hover{
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+.rvr-btn:active{
+    background-color: darkgrey;
+    color: black;
+    border-left-color: dimgrey;
+    border-top-color: dimgrey;
+    border-bottom-color: white;
+    border-right-color: white;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
+
+.back-btn{
+    display: block;
+    margin-top: 20px;
+    /* margin-left: 20px; */
+    background-color: darkgrey;
+    height: 35px;
+    width: 180px;
+    border-style: solid;
+    border-width: 4px;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-color: dimgrey;
+    border-right-color: dimgrey;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+}
+.back-in_btn{
+    padding: 8px;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    color: white;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.back-btn:hover{
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+.back-btn:active{
+    background-color: darkgrey;
+    color: black;
+    border-left-color: dimgrey;
+    border-top-color: dimgrey;
+    border-bottom-color: white;
+    border-right-color: white;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
+
+.next-round-btn{
+    position: absolute;
+    display: none;
+    /* padding-left: 50px; */
+    /* margin-top: 20px; */
+    /* margin-left: 20px; */
+    background-color: darkgrey;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* text-align: center; */
+    z-index: 1;
+    height: 35px;
+    width: 250px;
+    border-style: solid;
+    border-width: 4px;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-color: dimgrey;
+    border-right-color: dimgrey;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+}
+.next-round-in_btn{
+    padding: 8px;
+    padding-left: 27px;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    color: white;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.next-round-btn:hover{
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+.next-round-btn:active{
+    background-color: darkgrey;
+    color: black;
+    border-left-color: dimgrey;
+    border-top-color: dimgrey;
+    border-bottom-color: white;
+    border-right-color: white;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
+.finish-game-btn{
+    position: absolute;
+    display: none;
+    /* padding-left: 50px; */
+    /* margin-top: 20px; */
+    /* margin-left: 20px; */
+    background-color: darkgrey;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* text-align: center; */
+    z-index: 1;
+    height: 35px;
+    width: 175px;
+    border-style: solid;
+    border-width: 4px;
+    /* color: white; */
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-color: dimgrey;
+    border-right-color: dimgrey;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+}
+.finish-game-in_btn{
+    padding: 8px;
+    padding-left: 28px;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    color: white;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.finish-game-btn:hover{
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+.finish-game-btn:active{
+    background-color: darkgrey;
+    color: black;
+    border-left-color: dimgrey;
+    border-top-color: dimgrey;
+    border-bottom-color: white;
+    border-right-color: white;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
 
 
 .music-btn{
@@ -159,49 +462,102 @@ body {
 }
 
 
-.musicButton {
-    display: inline-flex;
-    background-color: white;
-    padding: 15px;
-    border-radius: 4px;
-    /* position: absolute; */
-    align-items: center;
+.restart-game-btn{
+    display: inline-block;
+    background-color: darkgrey;
+    height: 35px;
+    width: 210px;
+    border-style: solid;
+    border-width: 4px;
+    padding-left: 10px;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-color: dimgrey;
+    border-right-color: dimgrey;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+}
+.restart-game-in_btn{
+    color: white;
+    padding: 10px;
+    text-align: center;
     justify-content: center;
-    cursor: pointer;
-    width: 150px;
-    height: 50px;
-    font-family: 'Press Start 2P', cursive;
-    transition-duration: 0.4s;
-    z-index: 1;
-}
-
-.musicButton:hover {
-    background-color: rgb(196, 196, 196);
-    color: black;
-}
-
-.nextRoundBtn {
-    display: none;
-    background-color: white;
-    border-radius: 4px;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    width: 200px;
-    height: 50px;
+    font-size: 20px;
     font-family: 'Press Start 2P', cursive;
-    transition-duration: 0.4s;
-    z-index: 1;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.restart-game-btn:hover{
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+.restart-game-btn:active{
+    background-color: darkgrey;
+    color: black;
+    border-left-color: dimgrey;
+    border-top-color: dimgrey;
+    border-bottom-color: white;
+    border-right-color: white;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
 }
 
-.nextRoundBtn:hover {
-    background-color: rgb(196, 196, 196);
-    color: black;
+
+.main-menu-btn{
+    display: inline-block;
+    background-color: darkgrey;
+    height: 35px;
+    width: 210px;
+    border-style: solid;
+    border-width: 4px;
+    margin-left: 30px;
+    padding-left: 10px;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-color: dimgrey;
+    border-right-color: dimgrey;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
 }
+.main-menu-in_btn{
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.main-menu-btn:hover{
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+.main-menu-btn:active{
+    background-color: darkgrey;
+    color: black;
+    border-left-color: dimgrey;
+    border-top-color: dimgrey;
+    border-bottom-color: white;
+    border-right-color: white;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
 
 .middleLine {
     position: absolute;
@@ -229,8 +585,33 @@ body {
     align-items: center;
 }
 
+.landing-2 {
+    position: absolute;
+    display: none;
+    width: 100%;
+    z-index: 1;
+    width: 100%;
+    top: 15%;
+    /* text-align: center; */
+    /* transform: translate(0, -15%); */
+    align-items: center;
+}
+
+.ending-page {
+    position: absolute;
+    display: none;
+    width: 100%;
+    z-index: 1;
+    width: 100%;
+    top: 60%;
+    /* text-align: center; */
+    /* transform: translate(0, -15%); */
+    align-items: center;
+}
+
 .welcomeBoard {
     display: block;
+    /* top: 50%; */
     text-align: center;
     color: white;
     width: 100%;
@@ -263,7 +644,11 @@ body {
     1px 22px 10px rgba(16,16,16,0.2),
     1px 25px 35px rgba(16,16,16,0.2),
     1px 30px 60px rgba(16,16,16,0.4);
+
+    animation: shine 1s infinite;
+
 }
+
 
 .welcomeBoard h3 {
     padding-top: 30px;
@@ -295,15 +680,17 @@ body {
 .noticeBoard {
     display: block;
     background-color: white;
-    left: 100%;
+    /* left: 100%; */
+    top: 50%;
     width: 850px;
-    height: 420px;
+    height: 520px;
     border-radius: 2%;
     border: 5px solid grey;
     font-family: 'Press Start 2P', cursive;
     font-size: 10px;
     z-index: 1;
-    margin: 20px;
+    margin-bottom: 25px;
+    /* margin: 20px; */
 }
 
 .noticeBoardWrapper {
@@ -371,6 +758,7 @@ body {
     left: 0;
     font-family: 'Press Start 2P', cursive;
     font-size: 3vw;
+    z-index: 1;
 }
 
 .version {
