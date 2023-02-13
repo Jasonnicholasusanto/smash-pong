@@ -184,6 +184,8 @@ function rematch() {
 }
 
 function gameLevelEasyOption() {
+    buttonClicked();
+
     document.querySelector("#hardButton").style.display = "none";
     document.querySelector("#easyButton").style.display = "inline-block";
 
@@ -191,6 +193,8 @@ function gameLevelEasyOption() {
 }
 
 function gameLevelHardOption() {
+    buttonClicked(); 
+    
     document.querySelector("#easyButton").style.display = "none";
     document.querySelector("#hardButton").style.display = "inline-block";
 
