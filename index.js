@@ -13,6 +13,7 @@ let winRound = 3;
 let gameCount = 0;
 let redPoints = 0;
 let bluePoints = 0;
+let mute = true;
 
 
 const paddle1 = new Paddle({
@@ -89,11 +90,14 @@ function animate() {
         document.getElementById("menu-theme-audio").loop = true;
         document.getElementById("game-theme-audio").loop = true;
 
-        console.log("Still in animate()");
-
 
         if (startGame && !gameOver){
-            document.querySelector("#game-theme-audio").play();
+            if(!mute){
+                document.querySelector("#game-theme-audio").play();
+            } else {
+                document.querySelector("#game-theme-audio").pause();
+            }
+        
             paddle1.update()
             paddle2.update()
             ball.update()

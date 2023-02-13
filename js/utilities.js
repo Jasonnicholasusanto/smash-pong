@@ -35,6 +35,8 @@ function playThemeSong() {
     document.querySelector("#menu-theme-audio").play();
     document.querySelector("#muteMusic").style.display = "inline-block";
     document.querySelector("#unmuteMusic").style.display = "none";
+
+    mute = false;
 }
 
 
@@ -43,6 +45,8 @@ function pauseThemeSong() {
     document.querySelector("#menu-theme-audio").pause();
     document.querySelector("#unmuteMusic").style.display = "inline-block";
     document.querySelector("#muteMusic").style.display = "none";
+
+    mute = true;
 }
 
 
@@ -194,7 +198,7 @@ function gameLevelEasyOption() {
 
 function gameLevelHardOption() {
     buttonClicked(); 
-    
+
     document.querySelector("#easyButton").style.display = "none";
     document.querySelector("#hardButton").style.display = "inline-block";
 
